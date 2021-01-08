@@ -16,7 +16,7 @@
     "websockify": "./websockify.js"
   },
   "scripts": {
-    "start": "node websockify.js 127.0.0.1:8080 19UV.aternos.me:57409"
+    "start": "node websockify.js 127.0.0.1:25566 19UV.aternos.me:57409"
   },
   "engines": {
     "node": ">=0.8.9"

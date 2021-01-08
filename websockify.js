@@ -17,6 +17,7 @@ var argv = require('optimist').argv,
     path = require('path'),
     fs = require('fs'),
     mime = require('mime-types'),
+	process = require('process'),
 
     Buffer = require('buffer').Buffer,
     WebSocketServer = require('ws').Server,
@@ -181,7 +182,7 @@ try {
     idx = source_arg.indexOf(":");
     if (idx >= 0) {
         source_host = source_arg.slice(0, idx);
-        source_port = parseInt(source_arg.slice(idx+1), 10);
+        source_port = process.env.PORT || parseInt(source_arg.slice(idx+1), 10);
     } else {
         source_host = "";
         source_port = parseInt(source_arg, 10);
